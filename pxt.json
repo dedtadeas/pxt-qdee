@@ -1,0 +1,25 @@
+{
+    "name": "qdee",
+    "version": "1.0.0",
+    "description": "Blocks for the Hiwonder Qdee robot: motors, servos (Servo Driver on Port 10), sensors, lights, IR",
+    "license": "MIT",
+    "dependencies": {
+        "core": "*",
+        "microphone": "*"
+    },
+    "files": [
+        "README.md",
+        "main.ts",
+        "QdeeRGBLight.ts",
+        "sendbuffer.asm",
+        "_locales/zh/qdee-strings.json",
+        "_locales/zh/qdee-jsdoc-strings.json"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "public": true,
+    "supportedTargets": [
+        "microbit"
+    ]
+}
