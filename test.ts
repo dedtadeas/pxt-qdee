@@ -12,3 +12,9 @@ qdee.onQdee_remote_no_ir(function () {
     qdee.qdee_setMotorSpeed(0, 0)
 })
 qdee.controlIODigital(qdee.statusPort.High)
+qdeeRemote.driveWithRemote(42)
+qdeeRemote.onRemoteButton(QdeeRemoteButton.Top, function () {
+    qdee.qdee_servo(1, 40, 500)
+})
+qdeeRemote.vibrateRemote()
+qdeeRemote.startJoystickRemote(42)

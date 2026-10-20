@@ -15,6 +15,41 @@ problems we ran into, so everything here has been built and checked in current M
 
 Always put **Initialize Qdee** in **on start**. Without it, the Qdee board ignores every command.
 
+## Remote control with the Joystick:bit
+
+The **Qdee remote** category has blocks for both micro:bits:
+
+**On the micro:bit in the Joystick:bit**: one block in **on start**:
+
+```blocks
+qdeeRemote.startJoystickRemote(42)
+```
+
+Stick = drive. Right star button = tilt steering on / off (a diamond shows on the screen).
+The left, top and bottom star buttons are sent to the robot.
+
+**On the micro:bit in the Qdee**:
+
+```blocks
+qdee.qdee_Init()
+qdeeRemote.driveWithRemote(42)
+qdeeRemote.onRemoteButton(QdeeRemoteButton.Top, function () {
+    qdee.qdee_servo(1, 40, 500)
+})
+```
+
+- The robot **stops by itself** when the remote is switched off or out of range.
+- Both micro:bits must use the **same channel** (42 above). Every robot on that channel listens,
+  so switch off the robots you aren't using, or give each pair its own channel.
+- **make the remote vibrate** buzzes the Joystick:bit, for example when the ultrasonic sensor sees a wall.
+- The remote speaks the same radio messages as the robotics-club Cutebot programs, so one Joystick:bit
+  can drive either robot.
+
+## Czech blocks / Bloky česky
+
+Set MakeCode to Czech (⚙️ → **Language** → **Čeština**) and the Qdee blocks appear in Czech,
+for example **spusť Qdee** and **otoč servo 1 na úhel 40 za 500 ms**. Port names stay as printed on the board.
+
 ## Servos
 
 The Qdee's servos don't plug into the board directly:
@@ -56,6 +91,8 @@ with parts of [LewanSoul2018/Qdee](https://github.com/LewanSoul2018/Qdee) (2021)
 - New simple servo block: **move servo … to angle … in … ms**.
 - Added from the 2021 version: **on remote-control … long pressed**, **on remote-control stop send**,
   **Set port HIGH/LOW**.
+- New **Qdee remote** blocks for the Joystick:bit (radio).
+- Czech translation of all blocks.
 - [LOBOT-ROBOT/Qdee](https://github.com/LOBOT-ROBOT/Qdee) can't be used any more: it depends on
   repositories that were deleted.
 
