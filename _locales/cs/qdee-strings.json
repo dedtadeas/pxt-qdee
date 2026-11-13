@@ -203,7 +203,7 @@
     "qdee.qdee_show_expressions|block": "Qdee ukaž obličej %type",
     "qdee.qdee_stop|block": "zastav Qdee",
     "qdee.qdee_touchButton|block": "dotykové tlačítko|port %port|je zmáčknuté",
-    "qdee.qdee_ultrasonic|block": "sonar|port %port|vzdálenost (cm)",
+    "qdee.qdee_ultrasonic|block": "sonar na|%port|vzdálenost (cm)",
     "qdee.statusPort.High|block": "zapnuto",
     "qdee.statusPort.Low|block": "vypnuto",
     "qdee.touchKeyPort.port1|block": "Port 1",
