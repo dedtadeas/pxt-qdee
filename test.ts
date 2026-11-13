@@ -17,4 +17,5 @@ qdeeRemote.onRemoteButton(QdeeRemoteButton.Top, function () {
     qdee.qdee_servo(1, 40, 500)
 })
 qdeeRemote.vibrateRemote()
+qdeeRemote.onRemoteButton(QdeeRemoteButton.A, function () {})
 qdeeRemote.startJoystickRemote(42)
