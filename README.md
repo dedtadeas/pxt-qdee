@@ -22,7 +22,7 @@ Only what a beginner needs, grouped like the robot's parts:
 | Group | Blocks |
 |---|---|
 | Start | Initialize Qdee |
-| Drive | motor 1 / motor 2 speed, stop Qdee |
+| Drive | M1 / M2 speed (the motor sockets M1 and M2 on the board), stop Qdee |
 | Servos (Port 10) | move servo … to angle … in … ms, set bus servo number |
 | Sonar | ultrasonic distance on Port 1 or 2 |
 

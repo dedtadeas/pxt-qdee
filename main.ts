@@ -794,7 +794,7 @@ export function qdee_stop() {
 /**
 *	Set the speed of the number 1 motor and number 2 motor, range of -100~100, that can control the tank to go advance or turn of.
 */
-//% weight=94 blockId=qdee_setMotorSpeed blockGap=50 block="Set motor1 speed(-100~100)|%speed1|and motor2|speed %speed2"
+//% weight=94 blockId=qdee_setMotorSpeed blockGap=50 block="drive: M1 speed (-100~100)|%speed1|M2 speed|%speed2"
 //% group="Drive" weight=95
 //% speed1.min=-100 speed1.max=100
 //% speed2.min=-100 speed2.max=100
