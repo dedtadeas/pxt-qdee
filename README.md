@@ -15,6 +15,20 @@ problems we ran into, so everything here has been built and checked in current M
 
 Always put **Initialize Qdee** in **on start**. Without it, the Qdee board ignores every command.
 
+### What's in the Qdee category
+
+Only what a beginner needs, grouped like the robot's parts:
+
+| Group | Blocks |
+|---|---|
+| Start | Initialize Qdee |
+| Drive | motor 1 / motor 2 speed, stop Qdee |
+| Servos (Port 10) | move servo … to angle … in … ms, set bus servo number |
+| Sonar | ultrasonic distance on Port 1 or 2 |
+
+Everything else (built-in lights, line follower, touch button, knob, colour sensor, fan, IR remote,
+Bluetooth, Wi-Fi…) is under **more** at the bottom of the category.
+
 ## Remote control with the Joystick:bit
 
 The **Qdee remote** category has blocks for both micro:bits:
@@ -93,6 +107,7 @@ with parts of [LewanSoul2018/Qdee](https://github.com/LewanSoul2018/Qdee) (2021)
   **Set port HIGH/LOW**.
 - New **Qdee remote** blocks for the Joystick:bit (radio).
 - Czech translation of all blocks.
+- Beginner layout: 6 blocks in four groups, the rest under **more**. New **stop Qdee** block.
 - [LOBOT-ROBOT/Qdee](https://github.com/LOBOT-ROBOT/Qdee) can't be used any more: it depends on
   repositories that were deleted.
 

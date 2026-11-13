@@ -3,6 +3,7 @@ qdee.qdee_Init()
 qdee.qdee_servo(1, 40, 500)
 qdee.qdee_setBusServoNum(1)
 qdee.qdee_setMotorSpeed(50, 50)
+qdee.qdee_stop()
 let distance = qdee.qdee_ultrasonic(qdee.ultrasonicPort.port1)
 qdee.qdee_setLineFollowerBlackThreshold(100)
 qdee.onQdee_remote_ir_longpressed(qdee.IRKEY.R2, function () {
