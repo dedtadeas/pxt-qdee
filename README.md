@@ -23,7 +23,7 @@ Only what a beginner needs, grouped like the robot's parts:
 |---|---|
 | Start | Initialize Qdee |
 | Drive | M1 / M2 speed (the motor sockets M1 and M2 on the board), stop Qdee |
-| Servos (Port 10) | move servo … to angle … in … ms, set bus servo number |
+| Servos (Port 10) | move servo … to angle … in … ms |
 | Sonar | ultrasonic distance on Port 1 or 2 |
 
 Everything else (built-in lights, line follower, touch button, knob, colour sensor, fan, IR remote,
@@ -73,7 +73,8 @@ Qdee board  Port 10  ──5-pin cable──  Hiwonder Servo Driver  ──3-pin
 ```
 
 - Use the block **move servo 1 to angle 40 in 500 ms**. `0` is the middle, the range is −120 to 120.
-- **Port 10** is the servo port. Port 1 to 9 are for sensors (Port 1 is the ultrasonic sensor's default).
+- **Port 10** is the only servo port. Tested: the same Servo Driver does nothing on Port 9.
+  The servo command has no port in it, the board always sends it to Port 10.
 - **Every servo has a number.** New servos often all have the same number, so they all move
   together. To give a servo its own number, connect **only that servo** and run
   **Set bus servo number 1** once.

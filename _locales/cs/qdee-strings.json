@@ -193,7 +193,7 @@
     "qdee.qdee_send_remote_phone_data|block": "Qdee pošli tlačítko ovladače z telefonu|%data|",
     "qdee.qdee_servo|block": "otoč servo %servo|na úhel %angle|za %time ms",
     "qdee.qdee_setBrightness|block": "nastav jas %brightness",
-    "qdee.qdee_setBusServoNum|block": "dej servu číslo|%index|",
+    "qdee.qdee_setBusServoNum|block": "dej připojenému servu číslo %index",
     "qdee.qdee_setBusServo|block": "servo na sběrnici|port %port|číslo %index|úhel (-120~120) %angle|čas %duration",
     "qdee.qdee_setLineFollowerBlackThreshold|block": "nastav citlivost na černou|hodnota (0-255) %threshold",
     "qdee.qdee_setMotorSpeed|block": "jeď: M1 rychlostí (-100~100)|%speed1|M2 rychlostí|%speed2",
@@ -225,7 +225,7 @@
     "{id:group}Drive": "Jízda",
     "{id:group}Joystick:bit": "Joystick:bit (ovladač)",
     "{id:group}Robot": "Robot",
-    "{id:group}Servos": "Serva (Port 10)",
+    "{id:group}Servos": "Serva (jen Port 10)",
     "{id:group}Sonar": "Sonar",
     "{id:group}Start": "Start"
 }

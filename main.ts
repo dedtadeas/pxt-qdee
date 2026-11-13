@@ -726,9 +726,9 @@ export function qdee_servo(servo: number, angle: number, time: number) {
 * Give the only connected servo a new number. Connect just one servo when you do this.
 * @param index the new servo number (1 to 8), eg: 1
 */
-//% weight=98 blockId=qdee_setBusServoNum block="Set bus servo|number %index|"
+//% weight=98 blockId=qdee_setBusServoNum block="give the connected servo number %index"
 //% index.min=1 index.max=8
-//% group="Servos" weight=85
+//% advanced=true
 export function qdee_setBusServoNum(index: number) {
    let buf = pins.createBuffer(5);
    buf[0] = 0x55;
