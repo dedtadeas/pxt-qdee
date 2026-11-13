@@ -73,7 +73,7 @@ Qdee board  Port 10  ──5-pin cable──  Hiwonder Servo Driver  ──3-pin
 ```
 
 - Use the block **move servo 1 to angle 40 in 500 ms**. `0` is the middle, the range is −120 to 120.
-- **Port 10** is the only servo port. Tested: the same Servo Driver does nothing on Port 9.
+- **Port 10** is the only servo port (Hiwonder's own port table says so too: [Qdee Controller, archived](http://web.archive.org/web/20211019031944/http://wiki.hiwonder.com/QdeeController.html)). Tested: the same Servo Driver does nothing on Port 9.
   The servo command has no port in it, the board always sends it to Port 10.
 - **Every servo has a number.** New servos often all have the same number, so they all move
   together. To give a servo its own number, connect **only that servo** and run
