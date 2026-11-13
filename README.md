@@ -77,7 +77,7 @@ Qdee board  Port 10  ──5-pin cable──  Hiwonder Servo Driver  ──3-pin
   The servo command has no port in it, the board always sends it to Port 10.
 - **Every servo has a number.** New servos often all have the same number, so they all move
   together. To give a servo its own number, connect **only that servo** and run
-  **Set bus servo number 1** once.
+  **give the connected servo number 1** once (under **more**). Then the other servo alone, number 2.
 - A servo with a **blinking light** has switched itself off to protect itself: it's blocked, too hot,
   or getting the wrong voltage. Switch off, check that it can move freely, and try again.
 
