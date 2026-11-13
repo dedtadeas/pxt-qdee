@@ -103,7 +103,7 @@ with parts of [LewanSoul2018/Qdee](https://github.com/LewanSoul2018/Qdee) (2021)
 
 - Fixed a compile error (`qdee_setLineFollowerBlackThreshold`) that stopped the extension from loading.
 - Fixed a memory leak in the serial message handler and stopped it from throwing away messages.
-- New simple servo block: **move servo … to angle … in … ms**.
+- New simple servo block: **move servo … to angle … in … ms**. The old "Set bus servo port …" block is hidden: its port choice was never sent to the board.
 - Added from the 2021 version: **on remote-control … long pressed**, **on remote-control stop send**,
   **Set port HIGH/LOW**.
 - New **Qdee remote** blocks for the Joystick:bit (radio).

@@ -694,7 +694,7 @@ export function qdee_servo(servo: number, angle: number, time: number) {
 * Set the angle of bus servo 1 to 8, range of -120~120 degree
 */
 //% weight=99 blockId=qdee_setBusServo block="Set bus servo|port %port|index %index|angle(-120~120) %angle|duration %duration"
-//% advanced=true
+//% blockHidden=true
 //% angle.min=-120 angle.max=120
 //% inlineInputMode=inline	 
      export function qdee_setBusServo(port: busServoPort, index: number, angle: number, duration: number) {
