@@ -1,6 +1,6 @@
 {
     "name": "qdee",
-    "version": "0.9.3",
+    "version": "0.9.4",
     "description": "Blocks for the Hiwonder Qdee robot: motors, servos (Servo Driver on Port 10), sensors, lights, IR",
     "license": "MIT",
     "dependencies": {

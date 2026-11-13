@@ -11,7 +11,8 @@
  *   string "horn"   top star button   (D, P13)
  *   string "lights" bottom star button (E, P14)
  *   string "a" / "b"  buttons A and B on the remote's micro:bit
- *   right star button (F, P15) switches tilt steering on the remote itself, so it is not sent
+ *   string "right"  right star button (F, P15)
+ *   buttons A+B together switch tilt steering on the remote itself (not sent)
  *   string "bump"   robot -> remote: the remote vibrates
  */
 enum QdeeRemoteButton {
@@ -24,7 +25,9 @@ enum QdeeRemoteButton {
     //% block="A on the micro:bit"
     A = 3,
     //% block="B on the micro:bit"
-    B = 4
+    B = 4,
+    //% block="right"
+    Right = 5
 }
 
 //% weight=90 color=#0fbc11 icon="" block="Qdee remote"
@@ -36,13 +39,14 @@ namespace qdeeRemote {
     let lastHeard = 0
     let robotStarted = false
     let remoteStarted = false
-    const MESSAGES = ["color", "horn", "lights", "a", "b"]
+    const MESSAGES = ["color", "horn", "lights", "a", "b", "right"]
     const BUTTON_EVENT = 0x7A00
 
     function buttonName(pin: DigitalPin): string {
         if (pin == DigitalPin.P12) return "color"
         if (pin == DigitalPin.P13) return "horn"
-        return "lights"
+        if (pin == DigitalPin.P14) return "lights"
+        return "right"
     }
 
     function onStarButton(pin: DigitalPin) {
@@ -67,7 +71,7 @@ namespace qdeeRemote {
 
     /**
      * Run this on the micro:bit inside the Joystick:bit. It sends the stick and the
-     * star buttons and buttons A/B to the robot by radio. Right star button = tilt steering on / off.
+     * four star buttons and buttons A/B to the robot by radio. A+B together = tilt steering on / off.
      * @param channel radio channel, the robot must use the same one, eg: 42
      */
     //% blockId=qdee_remote_start block="start Joystick:bit remote on channel %channel"
@@ -87,13 +91,14 @@ namespace qdeeRemote {
         onStarButton(DigitalPin.P12)
         onStarButton(DigitalPin.P13)
         onStarButton(DigitalPin.P14)
+        onStarButton(DigitalPin.P15)
         input.onButtonPressed(Button.A, function () {
             radio.sendString("a")
         })
         input.onButtonPressed(Button.B, function () {
             radio.sendString("b")
         })
-        pins.onPulsed(DigitalPin.P15, PulseValue.High, function () {
+        input.onButtonPressed(Button.AB, function () {
             tiltMode = !tiltMode
             showRemotePicture()
         })

@@ -34,6 +34,7 @@
     "QdeeRemoteButton.Bottom|block": "dolní",
     "QdeeRemoteButton.B|block": "B na micro:bitu",
     "QdeeRemoteButton.Left|block": "levé",
+    "QdeeRemoteButton.Right|block": "pravé",
     "QdeeRemoteButton.Top|block": "horní",
     "qdee.AvoidSensor.Sensor_1|block": "senzor 1",
     "qdee.AvoidSensor.Sensor_2|block": "senzor 2",

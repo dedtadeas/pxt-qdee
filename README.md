@@ -39,8 +39,8 @@ The **Qdee remote** category has blocks for both micro:bits:
 qdeeRemote.startJoystickRemote(42)
 ```
 
-Stick = drive. Right star button = tilt steering on / off (a diamond shows on the screen).
-The left, top and bottom star buttons are sent to the robot.
+Stick = drive. **A+B together** = tilt steering on / off (a diamond shows on the screen).
+All four star buttons (left, top, right, bottom) and buttons A and B are sent to the robot.
 
 **On the micro:bit in the Qdee**:
 
